@@ -1,0 +1,34 @@
+.wp-block-pullquote.is-style-wporg-home-pullquote {
+	padding: 0;
+	margin-bottom: 0;
+	font-family: $font__serif;
+	border: none;
+
+	blockquote {
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+		border: none;
+		text-align: left;
+	}
+
+	@include breakpoint( $breakpoint-tablet ) {
+		position: absolute;
+		top: 14rem;
+		left: -17.5rem;
+		max-width: 16rem;
+
+		blockquote {
+			border-left: none;
+			color: $color__text-heading;
+		}
+
+		p {
+			font-size: 2.8rem;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}

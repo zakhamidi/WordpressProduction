@@ -1,0 +1,11 @@
+p.is-style-wporg-tldr {
+	color: $color__text-heading;
+	font-family: $font__serif;
+	font-style: italic;
+	font-size: 1rem;
+
+	@include breakpoint( $breakpoint-tablet ) {
+		text-align: center;
+		font-size: 1.25rem;
+	}
+}

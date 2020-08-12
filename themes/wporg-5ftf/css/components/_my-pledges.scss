@@ -1,0 +1,158 @@
+body.page.page-my-pledges {
+
+	// Expand archive content area to full-width of header.
+	.site-content .site-main {
+		padding: 0 10px;
+		max-width: $size__site-main;
+	}
+
+	.entry-header {
+		display: none;
+	}
+}
+
+.my-pledges__header {
+
+	.entry-content & {
+		margin-top: ms(10);
+		margin-bottom: ms(10);
+		border-bottom: 1px solid $color-gray-light-500;
+		padding-bottom: ms(2);
+	}
+
+	.my-pledges__title {
+		font-size: ms(8);
+	}
+
+	.my-pledges__dedication {
+		color: $color-gray-300;
+		font-size: ms(-1);
+	}
+
+	.my-pledges__avatar {
+		display: none;
+	}
+
+	@include breakpoint($breakpoint-tablet) {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-template-areas:
+			"avatar name"
+			"avatar dedication";
+
+		.my-pledges__avatar {
+			display: block;
+			margin-right: ms(2);
+			grid-area: avatar;
+
+			img {
+				border-radius: 100%;
+			}
+		}
+
+		.my-pledges__title {
+			margin: 0;
+			grid-area: name;
+		}
+
+		.my-pledges__dedication {
+			margin: 0;
+			grid-area: dedication;
+		}
+	}
+}
+
+.my-pledges__notice.notice {
+	margin-bottom: ms(4);
+}
+
+.my-pledges__list {
+
+	+ .my-pledges__list {
+		margin-top: ms(8);
+		border-top: 1px solid $color-gray-light-500;
+		padding-top: ms(8);
+
+		> h2 {
+			margin-top: 0;
+			margin-bottom: ms(5);
+		}
+	}
+}
+
+.my-pledges__pledge {
+	margin-bottom: ms(6);
+
+	.entry-image {
+		margin-bottom: ms(2);
+	}
+
+	.my-pledges__pledge-meta {
+		margin-bottom: ms(2);
+	}
+
+	.my-pledges__pledge-title {
+		display: inline-block;
+		margin-bottom: ms(-4);
+		font-size: ms(2);
+		text-decoration: underline;
+	}
+
+	.my-pledges__pledge-date {
+		margin: 0;
+		font-size: ms(-1);
+	}
+
+	.my-pledges__pledge-actions {
+
+		.button {
+			display: inline-block;
+			font-size: ms(-3);
+		}
+
+		.button + .button {
+			margin-left: 1em;
+		}
+
+		.button-link {
+			text-align: right;
+		}
+	}
+
+	@include breakpoint($breakpoint-tablet) {
+		display: grid;
+		grid-template-columns: 300px 1fr auto;
+		grid-template-areas: "logo name actions";
+		align-items: center;
+		text-align: left;
+
+		.entry-image {
+			grid-area: logo;
+			margin-bottom: 0;
+			margin-right: ms(2);
+		}
+
+		.my-pledges__pledge-meta {
+			grid-area: name;
+			margin-bottom: 0;
+			margin-right: ms(2);
+		}
+
+		.my-pledges__pledge-actions {
+			grid-area: actions;
+
+			.button {
+				display: block;
+			}
+
+			.button + .button {
+				margin-top: 0.5em;
+				margin-left: 0;
+			}
+
+			.button-link {
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+body.page-about .entry-content {
+
+	h2 {
+		margin-top: ms(10);
+		margin-bottom: ms(2);
+		font-size: ms(8);
+		font-weight: 300;
+	}
+
+	h3 {
+		font-size: ms(2);
+		font-weight: 400;
+		color: $color__text-heading;
+	}
+
+	@include breakpoint( $breakpoint-tablet ) {
+		> p,
+		> ul,
+		> h1,
+		> h2,
+		> h3,
+		> h4,
+		> h5,
+		> h6,
+		> .wp-block-media-text,
+		> .wp-block-button,
+		> .wp-block-group {
+			margin-left: 17.5rem;
+		}
+
+		> .wp-block-quote {
+			margin-left: calc( 17.5rem - 62px );
+		}
+
+		p.is-style-wporg-tldr {
+			margin-left: auto;
+		}
+	}
+}

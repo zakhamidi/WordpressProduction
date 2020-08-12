@@ -1,0 +1,23 @@
+body.page:not(.home) {
+
+	.entry-header {
+		background: none;
+
+		.entry-title {
+			color: $color__text-heading-darker;
+			font-size: ms( 8 );
+			font-weight: 300;
+			line-height: 1.5;
+			margin: 2rem auto 1rem;
+			padding: 0;
+		}
+	}
+
+	.entry-content {
+		padding: 0 0 ms( 10 );
+	}
+
+	.entry-footer {
+		padding: ms( 10 ) 0;
+	}
+}
